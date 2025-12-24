@@ -47,7 +47,7 @@ export function getSemesterWeek(): { semNum: number, weekNum: number } {
     let currDate = dayjs();
     // let currDate = dayjs('2025-10-18'); // for debugging
 
-    for (var i = 0; i < acadYear[0].length; i++) {
+    for (let i = 0; i < acadYear[0].length; i++) {
         let { startDateStr, endDateStr } = acadYear[0][i];
 
         let endDate = dayjs(endDateStr, "YYYY-MM-DD HH:mm:ss");
@@ -61,7 +61,7 @@ export function getSemesterWeek(): { semNum: number, weekNum: number } {
         }
     }
 
-    for (var i = 0; i < acadYear[1].length; i++) {
+    for (let i = 0; i < acadYear[1].length; i++) {
         let { startDateStr, endDateStr } = acadYear[1][i];
 
         let endDate = dayjs(endDateStr, "YYYY-MM-DD HH:mm:ss");

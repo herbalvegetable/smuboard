@@ -9,9 +9,9 @@ import { getHrefFromString } from '@/utils/getHrefFromString';
 
 type ModuleNamesContextType = {
     modules: any;
-    setModules: Function;
+    setModules: any;
     isLoading: boolean;
-    fetchUserTodolists: Function;
+    fetchUserTodolists: (userId: string) => void;
 }
 
 export const ModuleNamesContext = createContext<ModuleNamesContextType>({
