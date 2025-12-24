@@ -1,0 +1,77 @@
+.item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    cursor: pointer;
+    user-select: none;
+    /* padding: 0.5em 1em; */
+    /* transition: 0.1s; */
+    overflow: hidden;
+}
+
+.item.completed{
+    text-decoration: line-through;
+    font-style: italic;
+    color: rgba(99, 112, 129, 0.75);
+}
+/* .module .items > .item:hover{
+    border: 1px solid rgba(255, 255, 255, 0.9);
+} */
+.item .checkBox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    align-self: stretch;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    border-radius: 8px;
+    /* height: 100%; */
+}
+.item .checkBox button{
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: none;
+    transition: 0.1s;
+    cursor: pointer;
+}
+.item .checkBox.hovering button{
+    background-color: rgba(255, 255, 255, 1);
+}
+.item .checkBox.completed button{
+    background-color: #7C98B3;
+}
+.item .checkBox.hovering.completed button{
+    background-color: #ACCBE1;
+}
+
+.item .content{
+    display: flex;
+    flex-direction: column;
+    gap: 0.35em;
+    padding: 0.5em 1em 0.5em 1em;
+    flex: 1;
+}
+.item .content .datetime{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.item .content .datetime .dateText{
+    
+}
+.item .content .datetime .diffText{
+    
+}
+.item .content .description{
+    
+}
+.item .content .description span{
+    font-size: 18px;
+}

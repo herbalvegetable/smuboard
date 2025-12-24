@@ -1,0 +1,214 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    width: 100%;
+    margin-right: 2em;
+}
+
+.main .title {
+    font-size: 24px;
+    margin-bottom: 1em;
+}
+
+
+.settingActions {
+    display: flex;
+    flex-direction: column;
+
+    backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: black;
+
+    padding: 1em 2em;
+    border-radius: 7mm;
+    margin-bottom: 1em;
+}
+
+.settingActions .title {
+    margin-bottom: 0.5em;
+}
+
+.settingActions .actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+}
+
+.actionBtn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5em;
+    border-radius: 7mm;
+    width: fit-content;
+
+    backdrop-filter: blur(20px);
+    background-color: rgba(0, 47, 255, 0.5);
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: black;
+    padding: 0.5em 1em;
+
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.actionBtn:hover {
+    color: white;
+}
+
+.addListModal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    border-radius: 8px;
+    backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 1em;
+    color: #171717;
+}
+
+.addListModal .title {}
+
+.addListModal .submitBtn {
+    align-self: flex-end;
+    border-radius: 7mm;
+    background-color: royalblue;
+    color: white;
+    padding: 0.5em 1.2em;
+    cursor: pointer;
+    margin-top: 1em;
+    transition: 0.1s;
+}
+
+.addListModal .submitBtn:hover {
+    opacity: 0.75;
+}
+
+.editListModal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    border-radius: 8px;
+    backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 1em;
+    color: #171717;
+}
+
+.editListModal .title {
+    margin-bottom: 1em;
+}
+
+.editListModal .modules {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.editListModal .modules > .moduleContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.editListModal .modules > .moduleContainer .title{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+    color: rgb(72, 72, 72);
+    margin-right: 1em;
+    margin-bottom: 0;
+
+    min-width: 60px;
+}
+
+.editListModal .modules > .moduleContainer .deleteBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    cursor: pointer;
+    margin-left: auto;
+    border-radius: 7mm;
+    transition: 0.1s;
+}
+.editListModal .modules > .moduleContainer .deleteBtn:hover{
+    background-color: white;
+}
+.editListModal .modules > .moduleContainer .deleteBtn .icon{
+    color: rgb(183, 0, 0);
+}
+
+.editListModal .submitBtn {
+    align-self: flex-end;
+    border-radius: 7mm;
+    background-color: royalblue;
+    color: white;
+    padding: 0.5em 1.2em;
+    cursor: pointer;
+    margin-top: 1em;
+    transition: 0.1s;
+}
+
+.editListModal .submitBtn:hover {
+    opacity: 0.75;
+}
+
+
+.logoutButton {
+    flex: 1;
+    width: 100%;
+}
+
+.logoutButton button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: space-between; */
+
+    /* background-color: #429CF0; */
+    background-color: rgb(183, 0, 0);
+    color: rgb(255, 255, 255);
+    border-radius: 7mm;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    transition: 0.1s;
+    gap: 1em;
+}
+
+.logoutButton button:hover {
+    background-color: rgba(66, 156, 240, 0.5);
+    color: white;
+}
+
+.logoutButton button span {
+    font-size: 14px;
+}

@@ -1,0 +1,104 @@
+.sideContent {
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+    /* background-color: rgba(255, 255, 255, 0.3); */
+    min-height: 100vh;
+    padding-top: 1em;
+}
+
+.sideContent .title {
+    text-align: center;
+
+    padding: 1em 0;
+    backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: black;
+    font-weight: 600;
+    user-select: none;
+}
+
+.sideContent .title span {
+    font-size: 18px;
+}
+
+.sideContent .sideContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    max-height: 100vh;
+}
+
+.scrollContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+    overflow: hidden;
+    margin-right: 8px;
+}
+.scrollContainer:hover{
+    overflow: auto;
+    margin-right: 0px !important;
+}
+.sideContent .sideContainer .scrollContainer > *{
+    flex-shrink: 0;
+}
+
+.sideContent .sideContainer .scrollContainer::-webkit-scrollbar {
+  width: var(--sb-size)
+}
+
+.sideContent .sideContainer .scrollContainer::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 3px;
+}
+
+.sideContent .sideContainer .scrollContainer::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 3px;
+  
+}
+
+.scrollContainer > *:first-child{
+    margin-top: 0.8em;
+}
+.scrollContainer > *:last-child{
+    margin-bottom: 200px;
+}
+.calendarEvent{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    border-radius: 5px;
+    overflow: hidden;
+    gap: 5px;
+}
+.calendarEvent .mark{
+    width: 15px;
+    border-radius: 5px;
+}
+.calendarEvent .content{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 0.5em 1em;
+
+    border-radius: 8px;
+    backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #171717;
+}
+.calendarEvent .content .summary{
+    
+}
+.calendarEvent .content .summary span{
+    
+}

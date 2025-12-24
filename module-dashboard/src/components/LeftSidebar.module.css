@@ -1,0 +1,89 @@
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    min-width: 200px;
+    width: 250px;
+    /* background-color: #2A3C24; */
+    height: 100vh;
+    /* border-right-width: 1px;
+    border-color: white; */
+
+    /* backdrop-filter: blur(20px); */
+}
+.title{
+    flex: 1;
+    text-align: center;
+    padding: 0.5em;
+    margin-bottom: 1em;
+}
+.title span{
+    font-size: 24px;
+}
+.modules{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+.modules > a .module{
+    flex: 1;
+    padding: 0.5em 1em 0.5em 1.5em;
+    cursor: pointer;
+    transition: 0.1s;
+    border-radius: 0 8px 8px 0;
+}
+.modules > a .module:hover{
+    color: #0a0a0a;
+    background-color: rgb(208, 208, 208);
+}
+.modules > a .module span{
+    
+}
+
+.loginButton{
+    flex: 1;
+    width: 100%;
+    padding-left: 1.5em;
+}
+.loginButton button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: space-between; */
+
+    /* background-color: #429CF0; */
+    background-color: rgb(235, 235, 235);
+    color: black;
+    border-radius: 8px;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    transition: 0.1s;
+    gap: 1em;
+}
+.loginButton button:hover{
+    background-color: rgba(66, 156, 240, 0.5);
+    color: white;
+}
+.loginButton button img{
+    width: 24px;
+    height: 24px;
+}
+.loginButton button span{
+    font-size: 14px;
+}
+
+.weekTitle{
+    position: absolute;
+    left: 0;
+    bottom: 15;
+
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    gap: 0.25em;
+    padding: 0 1em;
+}
+.weekTitle > span{
+    font-size: 18px;
+}

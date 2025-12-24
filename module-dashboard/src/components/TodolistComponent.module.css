@@ -1,0 +1,89 @@
+.module {
+    width: 100%;
+
+    border-radius: 8px;
+    backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 1em;
+    color: #171717;
+}
+
+.module .title {
+    margin-bottom: 1em;
+}
+
+.module .title span {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.module .items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.module .items .addItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.25em;
+    padding: 0.5em 0;
+    transition: 0.1s;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.module .items .addItem:hover {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.module .items .addItem svg {
+    color: #304D6D;
+}
+
+.itemModal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+
+    border-radius: 8px;
+    backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 1em;
+    color: #171717;
+}
+
+.itemModal .title{
+    width: 100%;
+    text-align: left;
+    font-size: 24px;
+    font-weight: 600;
+    /* margin-bottom: 1em; */
+}
+
+.itemModal .submitBtn{
+    align-self: flex-end;
+    border-radius: 7mm;
+    background-color: royalblue;
+    color: white;
+    padding: 0.5em 1.2em;
+    cursor: pointer;
+    margin-top: 1em;
+    transition: 0.1s;
+}
+.itemModal .submitBtn:hover{
+    opacity: 0.75;
+}

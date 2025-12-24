@@ -1,0 +1,36 @@
+.toast{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    color: black;
+    border-radius: 7mm;
+    padding: 0.5em 1em;
+}
+.toast.dismiss{
+    animation-name: animFadeOut;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes animFadeOut{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.toast .message{
+    font-size: 18px;
+}
+.toast .dismissBtn{
+    margin-left: 10px;
+    cursor: pointer;
+}

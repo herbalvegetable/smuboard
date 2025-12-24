@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  /* --sb-track-color: #232E33; */
+  --sb-track-color: rgba(0, 0, 0, 0);
+  /* --sb-thumb-color: #5f5f5f; */
+  --sb-thumb-color: rgba(255, 255, 255, 0.5);
+  --sb-size: 8px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  /* background: var(--background); */
+  background-image: url("/media/aurora.png");
+  background-attachment: fixed;
+  object-fit: cover;
+  object-position: center;
+  color: var(--foreground);
+  font-family: "Lexend", sans-serif;
+  overflow-y: scroll; /* stay consistent with home dashboard */
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+      scrollbar-color: var(--sb-thumb-color)
+                     var(--sb-track-color);
+  }
+}
