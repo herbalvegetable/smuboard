@@ -24,7 +24,14 @@ type CalendarEventsByDateType = {
     events: CalendarEventType[];
 }
 
-const GOOGLE_EVENT_COLORS = {
+interface ColorConfigType{
+    background: string,
+    foreground: string,
+}
+interface ColorMapType{
+    [key: number]: ColorConfigType;
+}
+const GOOGLE_EVENT_COLORS: ColorMapType = {
     "1": { background: "#a4bdfc", foreground: "#1d1d1d" },
     "2": { background: "#7ae7bf", foreground: "#1d1d1d" },
     "3": { background: "#dbadff", foreground: "#1d1d1d" },
