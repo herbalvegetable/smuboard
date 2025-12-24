@@ -1,8 +1,8 @@
 import dayjs, { Dayjs } from "dayjs";
-import { ModuleTodo, TodoItem } from "@/types";
+import { ModuleTodoType, TodoItem } from "@/types";
 
 
-export function getTasksDescendingUrgency(modules: ModuleTodo[]): TodoItem[]{
+export function getTasksDescendingUrgency(modules: ModuleTodoType[]): TodoItem[]{
     let newItems: TodoItem[] = [];
 
     for (let mtodo of modules){
