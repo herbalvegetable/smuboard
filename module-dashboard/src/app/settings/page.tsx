@@ -48,7 +48,7 @@ function AddListModal(props: any) {
             userId: userId,
             moduleName: moduleName,
         }
-        fetch('http://localhost:5000/todolist', {
+        fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/todolist`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data),
@@ -126,7 +126,7 @@ function EditListModal(props: any) {
     }, [modNamesLoading]);
 
     const handleDeleteTodolist = (modId: string, userId: string) => {
-        fetch(`http://localhost:5000/todolist?id=${modId}&userId=${userId}`, {
+        fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/todolist?id=${modId}&userId=${userId}`, {
             method: 'DELETE',
         })
             .then(res => res.json()
@@ -142,7 +142,7 @@ function EditListModal(props: any) {
             userId: userId,
             modules: [...moduleNames],
         };
-        fetch(`http://localhost:5000/todolist?userId=${userId}`, {
+        fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/todolist?userId=${userId}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data),

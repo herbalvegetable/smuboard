@@ -28,7 +28,7 @@ export default function TodoItemComponent(props: any) {
 
     const handleMarkCompleted = (itemId: string) => {
         console.log("Delete todo item");
-        fetch(`http://localhost:5000/todoitem?id=${itemId}`, { method: 'DELETE' })
+        fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/todoitem?id=${itemId}`, { method: 'DELETE' })
             .then(res => res.json()
             .then(data => {
                 console.log(`DELETED item from ${moduleName}: `, data);

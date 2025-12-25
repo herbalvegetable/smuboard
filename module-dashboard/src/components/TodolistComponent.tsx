@@ -50,7 +50,7 @@ function AddItemModal(props: any) {
 		// Create todo item
 		let data = { summary, deadlineDate, todolistId };
 
-		fetch('http://localhost:5000/todoitem', {
+		fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/todoitem`, {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify(data),
@@ -127,7 +127,7 @@ export default function TodolistComponent(props: any) {
 
 	const fetchTodoitemsForList = async (todolistId: number) => {
 		try {
-			const res = await fetch(`http://localhost:5000/todoitem?todolistId=${todolistId}`);
+			const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/todoitem?todolistId=${todolistId}`);
 			const { data } = await res.json();
 			return data;
 		}

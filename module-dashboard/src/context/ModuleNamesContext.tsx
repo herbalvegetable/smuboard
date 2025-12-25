@@ -31,7 +31,7 @@ export const ModuleNamesProvider = (props: { children: React.ReactNode }) => {
 
     const fetchUserTodolists = (userId: string) => {
         setIsLoading(true);
-        fetch(`http://localhost:5000/todolist?userId=${userId}`)
+        fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/todolist?userId=${userId}`)
             .then(res => res.json()
                 .then(async data => {
                     console.log('FETCHED USER TODOLISTS', userId, data.data);

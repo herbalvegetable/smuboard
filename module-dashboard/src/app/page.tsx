@@ -26,7 +26,7 @@ export default function Home() {
 
 	useEffect(() => {
 		// fetch user's todolists
-		fetch(`http://localhost:5000/todolist?userId=${uuid}`)
+		fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/todolist?userId=${uuid}`)
 			.then(res => res.json()
 				.then(async data => {
 					// set todolist raw data
