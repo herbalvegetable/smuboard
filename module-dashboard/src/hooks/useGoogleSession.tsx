@@ -7,6 +7,12 @@ export const useGoogleSession = (session: any, logoutAction: any) => {
             const timeoutDuration = session.expires_at * 1000 - Date.now();
             console.log('Timeout duration: ', timeoutDuration / 1000, ' seconds');
 
+            // if timeoutduration <= 0, automatically log user out
+            if(timeoutDuration <= 0){
+                console.log('Session expired. Logging out...');
+                logoutAction();
+            }
+
             const timer = setTimeout(() => {
                 console.log('Session expired. Logging out...');
                 logoutAction();
