@@ -35,7 +35,7 @@ function AddItemModal(props: any) {
 	});
 
 	const handleSubmit = () => {
-		if(itemData.summary === ''){
+		if (itemData.summary === '') {
 			console.log('Summary is empty');
 			return;
 		}
@@ -138,14 +138,23 @@ export default function TodolistComponent(props: any) {
 	}
 
 	const convertTodoitemsData = (todoitemsData: any): TodoItem[] => {
-		return todoitemsData.map((itemData: any, i: number): TodoItem => {
-			return {
-				id: itemData.id,
-				moduleName: name,
-				description: itemData.summary,
-				datetime: dayjs(itemData.deadline_date).format("YYYY-MM-DD HH:mm:ss"),
-			}
-		});
+		const sortDate = (item1: TodoItem, item2: TodoItem) => {
+			const date1 = dayjs(item1.datetime, "YYYY-MM-DD HH:mm:ss");
+			const date2 = dayjs(item2.datetime, "YYYY-MM-DD HH:mm:ss");
+			
+			return date1.isBefore(date2) ? -1 : 1;
+		}
+
+		return todoitemsData
+			.map((itemData: any, i: number): TodoItem => {
+				return {
+					id: itemData.id,
+					moduleName: name,
+					description: itemData.summary,
+					datetime: dayjs(itemData.deadline_date).format("YYYY-MM-DD HH:mm:ss"),
+				}
+			})
+			.sort(sortDate);
 	}
 
 	// init todolist
@@ -221,7 +230,7 @@ export default function TodolistComponent(props: any) {
 			<div className={styles.items}>
 				{
 					todolist?.items.map((item: TodoItem, i: number) => {
-						return <TodoItemComponent key={i.toString()} {...item} refreshItems={refreshItems}/>
+						return <TodoItemComponent key={i.toString()} {...item} refreshItems={refreshItems} />
 					})
 				}
 				<div className={styles.addItem} onClick={() => onOpenModal()}>
