@@ -151,7 +151,7 @@ export default function TodolistComponent(props: any) {
 					id: itemData.id,
 					moduleName: name,
 					description: itemData.summary,
-					datetime: dayjs(itemData.deadline_date).format("YYYY-MM-DD HH:mm:ss"),
+					datetime: itemData.deadline_date,
 				}
 			})
 			.sort(sortDate);
@@ -170,6 +170,7 @@ export default function TodolistComponent(props: any) {
 
 		// init todoitems
 		let todoitems: TodoItem[] = convertTodoitemsData(todoitemsData);
+		console.log("todoitems: ", todoitems);
 
 		// init todolist
 		let todolist: ModuleTodoType = {

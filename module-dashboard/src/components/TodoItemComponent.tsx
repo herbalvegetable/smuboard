@@ -16,7 +16,8 @@ export default function TodoItemComponent(props: any) {
 
     useEffect(() => {
         const { measure, diff } = calculateDateDiff(dayjs(datetime, "YYYY-MM-DD HH:mm:ss"));
-        console.log("todoitem datetime diff: ", datetime, measure, diff);
+        // console.log("todoitem datetime diff: ", datetime, measure, diff);
+        console.log("datetime: ", datetime);
         setDiffMeasure(measure);
         setDateDiff(diff);
 
